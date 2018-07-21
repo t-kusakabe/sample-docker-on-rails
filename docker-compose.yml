@@ -13,6 +13,14 @@ services:
     tty: true
     stdin_open: true
 
+  front:
+    build: ./front/.
+    container_name: "sample_front"
+    volumes:
+      - .:/app/front
+    tty: true
+    stdin_open: true
+
   db:
     # 5.8だと認証でこける
     image: mysql:5.7
