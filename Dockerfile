@@ -20,4 +20,4 @@ COPY Gemfile ./Gemfile
 COPY Gemfile.lock ./Gemfile.lock
 
 RUN gem install bundler && \
-    bundler install
+    bundle install
