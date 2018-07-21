@@ -17,7 +17,9 @@
 /storage/*
 
 /front/node_modules
-/yarn-error.log
+/front/yarn-error.log
+/front/public/bundle.js
+/front/public/bundle.js.map
 
 /public/assets
 .byebug_history
