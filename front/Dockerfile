@@ -1,5 +1,7 @@
 FROM node:alpine
 
+WORKDIR /app/front
+
 RUN apk update && \
     apk --no-cache add \
       build-base \

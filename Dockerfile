@@ -1,7 +1,6 @@
 FROM ruby:alpine
 
-ARG APP_ROOT=/app
-WORKDIR $APP_ROOT
+WORKDIR /app
 
 RUN apk update && \
     apk --no-cache add \
