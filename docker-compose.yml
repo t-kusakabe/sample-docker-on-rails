@@ -1,0 +1,28 @@
+version: "3"
+services:
+  app:
+    build: .
+    container_name: "sample_app"
+    ports:
+      - "3000:3000"
+    command: bin/rails s
+    volumes:
+      - .:/app
+    depends_on:
+      - db
+    tty: true
+    stdin_open: true
+
+  db:
+    # 5.8だと認証でこける
+    image: mysql:5.7
+    container_name: "sample_mysql"
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql-data:/var/lib/mysql
+    environment:
+      MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
+
+volumes:
+  mysql-data:
